@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticias | PumaLand</title>
 
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#12001f;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.news-header{
+    text-align:center;
+    padding:140px 20px 40px;
+}
+
+.news-header h1{
+    font-size:55px;
+    color:#c56cff;
+}
+
+.news-header p{
+    color:#bbb;
+    margin-top:10px;
+}
+
+.filtros{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:40px 0;
+    flex-wrap:wrap;
+}
+
+.filtros button{
+    background:#8a2be2;
+    color:white;
+    border:none;
+    padding:14px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:17px;
+}
+
+.filtros button:hover{
+    background:#b84dff;
+    transform:translateY(-4px);
+}
+
+.contenedor{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.noticia{
+
+    background:#22003a;
+    border-left:6px solid #b84dff;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:25px;
+
+    animation:fade .5s;
+
+}
+
+.noticia h2{
+
+color:#d277ff;
+margin-bottom:10px;
+
+}
+
+.fecha{
+
+color:#999;
+margin-bottom:15px;
+
+}
+
+.estado{
+
+display:inline-block;
+background:#00b050;
+padding:5px 12px;
+border-radius:20px;
+margin-bottom:15px;
+
+}
+
+.oculto{
+
+display:none;
+
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+<img src="assets/logopumaland.png">
+
+<strong>PumaLand</strong>
+
+</div>
+
+<div>
+
+<a href="index.html">Inicio</a>
+<a href="noticias.html">Noticias</a>
+<a href="https://discord.gg/hKS5jngKT" target="_blank">Discord</a>
+
+</div>
+
+</nav>
+
+<div class="news-header">
+
+<h1>📰 Noticias</h1>
+
+<p>Mantente informado sobre PumaLand.</p>
+
+</div>
+
+<div class="filtros">
+
+<button onclick="mostrar('todo')">Todo</button>
+
+<button onclick="mostrar('eventos')">Eventos</button>
+
+<button onclick="mostrar('servidor')">Servidor</button>
+
+</div>
+
+<div class="contenedor">
+
+<div class="noticia eventos">
+
+<h2>🎉 Evento de Apertura</h2>
+
+<div class="fecha">
+
+📅 30 Julio 2026
+<br>
+🕗 20:00 Ecuador
+
+</div>
+
+<p>
+
+• Evento especial de inauguración.
+
+<br>
+
+• Recompensas exclusivas.
+
+<br>
+
+• Sorteos.
+
+</p>
+
+</div>
+
+<div class="noticia servidor">
+
+<h2>🛠 Cambios recientes del servidor</h2>
+
+<div class="estado">
+
+🟢 Online
+
+</div>
+
+<p>
+
+✔ Comenzó el desarrollo del Spawn.
+
+<br><br>
+
+✔ Desarrollo del Modpack en progreso.
+
+<br><br>
+
+✔ Configuración de plugins.
+
+<br><br>
+
+✔ Optimización del rendimiento.
+
+<br><br>
+
+✔ Preparando la apertura.
+
+</p>
+
+</div>
+
+<div class="noticia servidor">
+
+<h2>🐞 Corrección de Bugs</h2>
+
+<div class="fecha">
+
+22 Julio 2026
+
+</div>
+
+<p>
+
+Se corrigieron errores encontrados durante las pruebas del servidor.
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function mostrar(tipo){
+
+let noticias=document.querySelectorAll(".noticia");
+
+noticias.forEach(function(n){
+
+if(tipo=="todo"){
+
+n.classList.remove("oculto");
+
+}
+
+else{
+
+if(n.classList.contains(tipo)){
+
+n.classList.remove("oculto");
+
+}
+
+else{
+
+n.classList.add("oculto");
+
+}
+
+}
+
+});
+
+}
+
+mostrar("todo");
+
+</script>
+
+</body>
+
+</html>
