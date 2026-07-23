@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noticias | PumaLand</title>
-<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
-<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noticias | PumaLand</title>
+
+    <link rel="icon" href="assets/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -15,123 +21,364 @@
 
 <div class="logo">
 
-<img src="assets/logopumaland.png">
+<img src="assets/logopumaland.png" alt="Logo PumaLand">
 
-<strong>PumaLand</strong>
+<span>PumaLand</span>
 
 </div>
 
-<div>
+<div class="menu">
 
 <a href="index.html">Inicio</a>
-<a href="noticias.html">Noticias</a>
-<a href="https://discord.gg/hKS5jngKT" target="_blank">Discord</a>
+
+<a class="active" href="noticias.html">Noticias</a>
+
+<a href="servidor.html">Servidor</a>
+
+<a href="modpack.html">Modpack</a>
+
+<a href="donaciones.html">Donaciones</a>
+
+<a class="discord"
+href="https://discord.gg/hKS5jngKT"
+target="_blank">
+
+Discord
+
+</a>
 
 </div>
 
 </nav>
 
-<div class="news-header">
 
-<h1>📰 Noticias</h1>
+<header class="news-header">
 
-<p>Mantente informado sobre PumaLand.</p>
+<span class="categoria">
+
+CENTRO DE NOTICIAS
+
+</span>
+
+<h1>
+
+Noticias de PumaLand
+
+</h1>
+
+<p>
+
+Mantente informado sobre el desarrollo del servidor,
+eventos, mantenimiento y futuras actualizaciones.
+
+</p>
+
+</header>
+
+
+<section class="filtros">
+
+<button class="activo" onclick="mostrar('todo')">
+
+📰 Todo
+
+</button>
+
+<button onclick="mostrar('eventos')">
+
+🎉 Eventos
+
+</button>
+
+<button onclick="mostrar('servidor')">
+
+🛠 Servidor
+
+</button>
+
+</section>
+
+
+<main class="contenedor-noticias">
+
+
+
+<div class="principal noticia servidor">
+
+<img src="assets/logopumaland.png">
+
+<div class="contenido">
+
+<span class="etiqueta servidor">
+
+DESARROLLO
+
+</span>
+
+<h2>
+
+PumaLand comienza oficialmente su desarrollo
+
+</h2>
+
+<p>
+
+El equipo ya inició el desarrollo del servidor.
+
+Actualmente estamos trabajando en el Spawn,
+el Modpack, la página web y los sistemas
+principales para ofrecer la mejor experiencia.
+
+</p>
+
+<div class="info">
+
+<span>
+
+📅 23 Julio 2026
+
+</span>
+
+<a href="#">
+
+Leer más →
+
+</a>
 
 </div>
 
-<div class="filtros">
-
-<button onclick="mostrar('todo')">Todo</button>
-
-<button onclick="mostrar('eventos')">Eventos</button>
-
-<button onclick="mostrar('servidor')">Servidor</button>
+</div>
 
 </div>
 
-<div class="contenedor">
 
-<div class="noticia eventos">
 
-<h2>🎉 Evento de Apertura</h2>
+
+<div class="grid">
+
+
+
+<div class="card noticia servidor">
+
+<span class="etiqueta servidor">
+
+Servidor
+
+</span>
+
+<h3>
+
+Hosting contratado
+
+</h3>
+
+<p>
+
+Ya contamos con el hosting oficial para
+comenzar el desarrollo del servidor.
+
+</p>
 
 <div class="fecha">
 
-📅 30 Julio 2026
-<br>
-🕗 20:00 Ecuador
+📅 22 Julio 2026
 
 </div>
+
+</div>
+
+
+
+
+<div class="card noticia servidor">
+
+<span class="etiqueta servidor">
+
+Servidor
+
+</span>
+
+<h3>
+
+Spawn en desarrollo
+
+</h3>
 
 <p>
 
-• Evento especial de inauguración.
-
-<br>
-
-• Recompensas exclusivas.
-
-<br>
-
-• Sorteos.
+Nuestro equipo comenzó la construcción
+del Spawn principal.
 
 </p>
-
-</div>
-
-<div class="noticia servidor">
-
-<h2>🛠 Cambios recientes del servidor</h2>
-
-<div class="estado">
-
-🟢 Online
-
-</div>
-
-<p>
-
-✔ Comenzó el desarrollo del Spawn.
-
-<br><br>
-
-✔ Desarrollo del Modpack en progreso.
-
-<br><br>
-
-✔ Configuración de plugins.
-
-<br><br>
-
-✔ Optimización del rendimiento.
-
-<br><br>
-
-✔ Preparando la apertura.
-
-</p>
-
-</div>
-
-<div class="noticia servidor">
-
-<h2>🐞 Corrección de Bugs</h2>
 
 <div class="fecha">
 
-22 Julio 2026
+📅 23 Julio 2026
 
 </div>
+
+</div>
+
+
+
+
+<div class="card noticia servidor">
+
+<span class="etiqueta servidor">
+
+Servidor
+
+</span>
+
+<h3>
+
+Modpack en progreso
+
+</h3>
 
 <p>
 
-Se corrigieron errores encontrados durante las pruebas del servidor.
+Estamos configurando los mods que tendrá
+PumaLand.
 
 </p>
 
+<div class="fecha">
+
+📅 23 Julio 2026
+
 </div>
 
 </div>
+
+
+
+
+<div class="card noticia eventos">
+
+<span class="etiqueta evento">
+
+Evento
+
+</span>
+
+<h3>
+
+Próxima Beta Cerrada
+
+</h3>
+
+<p>
+
+Muy pronto anunciaremos la fecha para
+la Beta Cerrada del servidor.
+
+</p>
+
+<div class="fecha">
+
+📅 Próximamente
+
+</div>
+
+</div>
+
+
+
+
+<div class="card noticia eventos">
+
+<span class="etiqueta evento">
+
+Evento
+
+</span>
+
+<h3>
+
+Sorteo de rangos
+
+</h3>
+
+<p>
+
+Cuando abramos la Beta realizaremos
+un sorteo exclusivo para la comunidad.
+
+</p>
+
+<div class="fecha">
+
+Próximamente
+
+</div>
+
+</div>
+
+
+
+
+<div class="card noticia servidor">
+
+<span class="etiqueta servidor">
+
+Servidor
+
+</span>
+
+<h3>
+
+Optimización
+
+</h3>
+
+<p>
+
+Se están realizando pruebas para mejorar
+el rendimiento del servidor.
+
+</p>
+
+<div class="fecha">
+
+En desarrollo
+
+</div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<img src="assets/logopumaland.png">
+
+<h3>PumaLand</h3>
+
+<p>
+
+Mantente informado siguiendo las noticias
+oficiales del servidor.
+
+</p>
+
+<a href="https://discord.gg/hKS5jngKT"
+target="_blank">
+
+Unirse al Discord
+
+</a>
+
+<p class="copy">
+
+© 2026 PumaLand
+
+</p>
+
+</footer>
+
+
 
 <script>
 
@@ -139,11 +386,17 @@ function mostrar(tipo){
 
 let noticias=document.querySelectorAll(".noticia");
 
+let botones=document.querySelectorAll(".filtros button");
+
+botones.forEach(btn=>btn.classList.remove("activo"));
+
+event.target.classList.add("activo");
+
 noticias.forEach(function(n){
 
 if(tipo=="todo"){
 
-n.classList.remove("oculto");
+n.style.display="block";
 
 }
 
@@ -151,13 +404,13 @@ else{
 
 if(n.classList.contains(tipo)){
 
-n.classList.remove("oculto");
+n.style.display="block";
 
 }
 
 else{
 
-n.classList.add("oculto");
+n.style.display="none";
 
 }
 
@@ -166,8 +419,6 @@ n.classList.add("oculto");
 });
 
 }
-
-mostrar("todo");
 
 </script>
 
